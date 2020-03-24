@@ -66,13 +66,6 @@ class NewVisitorTest(LiveServerTestCase):
     self.wait_for_row_in_list_table('1: Buy peacock feathers')
     self.wait_for_row_in_list_table('2: Use peacock feathers to make a fly')
 
-    # Edith wonders whether the site will remember her list. Then she sees that the site has generated a unique URL for her -- there is some
-    # explanatory text to that effect.
-    self.fail('Finish the test!')
-    # She visits that URL - her to-do list is still there.
-
-    # Satisfied, she goes back to sleep
-
   def test_multiple_users_can_start_lists_at_different_urls(self):
     # Edith starts a new to-do list
     self.browser.get(self.live_server_url)
