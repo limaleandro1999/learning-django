@@ -1,0 +1,13 @@
+[[Unit]
+Description=Gunicorn server for ec2-54-207-249-34.sa-east-1.compute.amazonaws.c$
+
+[Service]
+Restart=on-failure
+User=ubuntu
+WorkingDirectory=/home/ubuntu/learning-django
+EnvironmentFile=/home/ubuntu/learning-django/.env
+
+ExecStart=/home/ubuntu/learning-django/virtualenv/bin/gunicorn --bind unix:/tmp$
+
+[Install]
+WantedBy=multi-user.target
