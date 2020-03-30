@@ -1,5 +1,5 @@
 [[Unit]
-Description=Gunicorn server for ec2-54-207-249-34.sa-east-1.compute.amazonaws.c$
+Description=Gunicorn server for ec2-54-207-249-34.sa-east-1.compute.amazonaws.com
 
 [Service]
 Restart=on-failure
@@ -7,7 +7,7 @@ User=ubuntu
 WorkingDirectory=/home/ubuntu/learning-django
 EnvironmentFile=/home/ubuntu/learning-django/.env
 
-ExecStart=/home/ubuntu/learning-django/virtualenv/bin/gunicorn --bind unix:/tmp$
+ExecStart=/home/ubuntu/learning-django/virtualenv/bin/gunicorn --bind unix:/tmp/ec2-54-207-249-34.sa-east-1.compute.amazonaws.com.socket superlists.wsgi:application
 
 [Install]
 WantedBy=multi-user.target
